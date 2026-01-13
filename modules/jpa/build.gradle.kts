@@ -7,8 +7,8 @@ dependencies {
     // jpa
     api("org.springframework.boot:spring-boot-starter-data-jpa")
     // querydsl
-    api("com.querydsl:querydsl-jpa::jakarta")
-    kapt("com.querydsl:querydsl-apt::jakarta")
+    implementation("io.github.openfeign.querydsl:querydsl-jpa:${project.properties["queryDslVersion"]}")
+    ksp("io.github.openfeign.querydsl:querydsl-ksp-codegen:${project.properties["queryDslVersion"]}")
     // jdbc-mysql
     runtimeOnly("com.mysql:mysql-connector-j")
 
